@@ -1,0 +1,20 @@
+The image processing or image group was one of the three main groups that were determined to be necessary to autonomous car function, along with the Steering and Speed groups. Image was in charge of rewriting the front-end user interface, getting images from the camera, and manipulating the image for the use of other groups.
+	The Image Processing group created the DriveTest class in order to have more control over the images created by TrakSim. DriveTest was designed to be run either independently or in conjunction with the older version DrDemo. This decision was made because both the Steering and Speed group used DrDemo for their code.
+	Image Processing created the ImagePicker class to get the images from cameras either real or through TrakSim. ImagePicker connects to DriveTest, but does not connect to DrDemo, which has its own way to get images from the cameras.
+	ImageManipulator was created to modify images gotten from ImagePicker. In order to the use ImageManipulator more efficiently with ImagePicker, ImageManager was created.
+Image related tasks, such as lane detection and object detection were not handled by the image processing group. These were instead handled by the steering and speed groups respectively.
+
+com.apw.drivedemo.DriveTest     extends JFrame implements KeyListener, MouseListener
+Class in charge of creating a window and populating it with information as well as creating an ImageManager.
+If the program starts with this, it will also control the speed of TrakSim through TrakManager.
+	com.apw.drivedemo.TimerRepaint     extends TimerTask
+		Class that controls the DriveTest window refreshing, if enabled using autoDriveTest().
+	com.apw.drivedemo.TrakManager     extends TimerTask
+		Class that controls the speed of TrakSim if DriveTest is run at the start of the program.
+	com.apw.ImageManagement.ImageManager
+		Class that will give manipulated images to external classes.
+	com.apw.ImageManagement.ImageManipulator
+		Class that manipulates images for various uses.
+	com.apw.ImageManagement.ImagePicker
+		Class that gets image from the camera.
+		
