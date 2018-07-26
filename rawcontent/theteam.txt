@@ -1,17 +1,37 @@
-##Our Team
+##Subdivisions
 
 #Image Management
 
+The raw images taken from the TrakSim Simulation or the camera must be pre-processed before they are analyzed by the steering and speed controllers.
+The Image Management team provides a framework by which images processed in multiple ways (conversion to simplified colors, monochrome, etc)
+
 #Steering
+
+The Steering team analyzes images to identify road markings and controls the direction of the wheels to follow the road.
 
 #Speed
 
-#Arduino
-
-#GPU
+The Speed team modulates the drive power for maximum control while turning and also searches for traffic signals in the image feed to find where to stop.
 
 #Website
 
-#Arduino
+The Website team works on producing content for our website (this website), including compiling documentation.
+
+#Hardware
+
+The Hardware team handles getting the code to actually run on the car. They run tests, give feedback, and write low level code to provide an interface to the other groups.
+
+#GPU
+
+The GPU group works on optimizing our performance through porting some of our resource-intensive functions to run on a GPU.
 
 #Alternate Hardware
+
+The Alternative Hardware group studies other platforms and boards we could utilize to increase performace and reduce cost with the purpose of creating the best hardware configuration to make a kit that could be used by high schools.
+
+
+##Our Team
+
+*********EVERYBODY ADD YOU'RE NAME (ALPHABETICAL) AND A SENTENCE OR TWO ABOUT WHAT YOU WORKED*************
+
+Vikram Kashyap: Vikram leads Hardware and is in charge of maintaining the car, running tests, and in general working with other groups to provide the bridge between hardware and software. He also produces documentation and content for the site.
